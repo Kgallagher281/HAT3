@@ -10,7 +10,7 @@ User.create!([
 	fname: "Kevin", 
 	lname: "Gallagher",
 	email: "kevin@kevin.com", 
-	password: "test"
+	password: "password"
 
 },
 
@@ -19,14 +19,14 @@ User.create!([
 	fname: "Boony", 
 	lname: "Guzman",
 	email: "boony@boony.com", 
-	password: "test"
+	password: "password"
 
 },
 { 	id: 3,
 	fname: "Sherill", 
 	lname: "Samuel",
 	email: "sherill@sherill.com", 
-	password: "test"
+	password: "password"
 
 }
 
