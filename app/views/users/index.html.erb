@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
+<div class="usernav"><% if user_signed_in? %>
+  <li><%= link_to 'Sign Out', { :action=>"destroy", :controller=>"devise/sessions" }, method: :delete %></li>
+  <% else %>
+  <li><%= link_to "Register", new_user_registration_path %></li>
+  <li><%= link_to "Log In", new_user_session_path %></li></ul>
+  <% end %>
+</div>
 
 <table>
   <thead>
@@ -8,7 +15,6 @@
       <th>Fname</th>
       <th>Lname</th>
       <th>Email</th>
-      <th>Password</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,11 +22,10 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td> <%= image_tag user.photo.url(:thumb) %></td>
         <td><%= user.fname %></td>
         <td><%= user.lname %></td>
         <td><%= user.email %></td>
-        <td><%= user.password %></td>
-        <td> <%= image_tag user.photo.url(:thumb) %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -30,5 +35,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New User', new_user_path %>
