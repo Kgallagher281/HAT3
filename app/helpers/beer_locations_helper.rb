@@ -1,0 +1,2 @@
+module BeerLocationsHelper
+end

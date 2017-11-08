@@ -4,6 +4,7 @@ class CreateBeers < ActiveRecord::Migration[5.1]
       t.string :name
       t.text :description
       t.text :food
+      t.integer :price
 
       t.timestamps
     end
