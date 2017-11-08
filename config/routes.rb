@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :beer_locations
+  resources :locations
   devise_for :users
   resources :beers
   resources :posts

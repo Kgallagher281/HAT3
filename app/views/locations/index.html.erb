@@ -1,22 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @beer.name %>
-</p>
+<h1>Locations</h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @beer.description %>
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Food:</strong>
-  <%= @beer.food %>
-</p>
+  <tbody>
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.name %></td>
+        <td><%= location.address %></td>
+        <td><%= link_to 'Show', location %></td>
+        <td><%= link_to 'Edit', edit_location_path(location) %></td>
+        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to 'Edit', edit_beer_path(@beer) %> |
-<%= link_to 'Back', beers_path %>
+<br>
+
+<%= link_to 'New Location', new_location_path %>
 
 
 <!DOCTYPE html>
@@ -41,12 +51,14 @@
     </style>
   </head>
   <body>
-  	<div id="floating-panel">
+    <div id="floating-panel">
       <input id="address" type="textbox" value="Sydney, NSW">
       <input id="submit" type="button" value="Geocode">
     </div>
 
     <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
     <script>
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
@@ -58,10 +70,24 @@
           center: {lat: -34.397, lng: 150.644},
           zoom: 6
         });
-      	var geocoder = new google.maps.Geocoder();
-      	document.getElementById('submit').addEventListener('click', function() {
-       		geocodeAddress(geocoder, map);
-   		})
+        var geocoder = new google.maps.Geocoder();
+
+
+        const locations = <%= raw @locations.map{|loc| loc.to_h}.to_json %>;
+
+       locations.forEach( function(location){
+          var marker = new google.maps.Marker({
+                        map: map,
+                        position: location
+                       });
+          marker.setMap(map);
+        });
+            
+
+
+        document.getElementById('submit').addEventListener('click', function() {
+          geocodeAddress(geocoder, map);
+      })
         infoWindow = new google.maps.InfoWindow;
 
       var panorama;
@@ -120,7 +146,9 @@
           }
         });
       }
-	setTimeout(initMap, 10);
+  setTimeout(initMap, 10);
+
+
 
 
     </script>
@@ -128,5 +156,8 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1YdmTHvdu_ed86HZznAx83rYvneTxQss&libraries=places">
 
     </script>
+
+
+
   </body>
 </html>
