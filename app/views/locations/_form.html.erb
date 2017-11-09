@@ -22,14 +22,16 @@
   </div>
 
    <div class="field">
-    <%= form.label :lattitude %>
-    <%= form.text_field :lattitude, id: :location_address %>
+    <%= form.hidden_field :latitude%>
+    <%= form.hidden_field :latitude, id: :location_latitude %>
   </div>
 
    <div class="field">
-    <%= form.label :longitude %>
-    <%= form.text_field :longitude, id: :location_address %>
+    <%= form.hidden_field :longitude %>
+    <%= form.hidden_field :longitude, id: :location_longitude %>
   </div>
+
+
 
   <div class="actions">
     <%= form.submit %>
@@ -43,7 +45,7 @@
         coords = results[0].geometry.location;
         var temp1 = results[0].geometry.location.lat();
         var temp2 = results[0].geometry.location.lng();
-        document.getElementById("lattitude").value = temp1;
+        document.getElementById("latitude").value = temp1;
         document.getElementById("longitude").value = temp2;
     })
     
