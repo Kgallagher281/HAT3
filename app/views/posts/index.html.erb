@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1> this is the working Posts Page</h1>
 
 <table>
   <thead>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
-        <td><%= post.comments %></td>
+        <td><%= image_tag post.photo.url(:thumb) %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

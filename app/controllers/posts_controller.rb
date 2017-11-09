@@ -10,6 +10,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comment = Comment.new
+    @comment.post_id = @post.id
   end
 
   # GET /posts/new
@@ -25,14 +27,13 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
+        format.html { redirect_to @post, notice: 'Post was created.' }
       else
         format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -69,6 +70,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body, :comments)
+      params.require(:post).permit(:title, :body, :comments, :photo)
     end
 end
