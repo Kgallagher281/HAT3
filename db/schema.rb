@@ -52,6 +52,10 @@ ActiveRecord::Schema.define(version: 20171108155742) do
     t.text "body"
     t.text "comments"
     t.integer "user_id"
+    t.string "photo_file_name"
+    t.string "photo_content_type"
+    t.integer "photo_file_size"
+    t.datetime "photo_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
