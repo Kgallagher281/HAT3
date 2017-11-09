@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @beer_location.location_id %>
+</p>
+
+<p>
+  <strong>Beer:</strong>
+  <%= @beer_location.beer_id %>
+</p>
+
+<%= link_to 'Edit', edit_beer_location_path(@beer_location) %> |
+<%= link_to 'Back', beer_locations_path %>
+
+

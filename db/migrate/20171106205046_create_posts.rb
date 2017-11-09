@@ -5,7 +5,6 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.text :body
       t.references :user
       t.attachment :photo
-
       t.timestamps
     end
   end
