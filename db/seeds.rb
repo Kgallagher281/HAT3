@@ -39,7 +39,7 @@ Location.create!([
 	name: "The Iron Horse",
 	address: "32 Cliff St, New York, NY 10038",
 	longitude: "-74.004983",
-	lattitude: "40.708235"
+	latitude: "40.708235"
 },
 
 {
@@ -47,7 +47,7 @@ Location.create!([
 	name: "PDT",
 	address: "113 St Marks Pl, New York, NY 10009",
 	longitude: "-73.983763",
-	lattitude: "40.727092"
+	latitude: "40.727092"
 
 },
 
@@ -56,7 +56,7 @@ Location.create!([
 	name: "The Ginger Man",
 	address: "11 E 36th St, New York, NY 10016",
 	longitude: "-73.982745",
-	lattitude: "40.749454"
+	latitude: "40.749454"
 },
 
 {
@@ -64,7 +64,7 @@ Location.create!([
 	name: "Jubilee Market",
 	address: "99 John St, New York, NY 10038",
 	longitude: "-74.006365",
-	lattitude: "40.708261"
+	latitude: "40.708261"
 },
 
 {
@@ -72,7 +72,7 @@ Location.create!([
 	name: "The Dead Rabbit Grocery and Grog",
 	address: "30 Water St, New York, NY 10004",
 	longitude: "-74.011034",
-	lattitude: "40.703300"
+	latitude: "40.703300"
 }
 
 
