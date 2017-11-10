@@ -70,7 +70,7 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 150.644},
-          zoom: 6
+          zoom: 7
         });
         var geocoder = new google.maps.Geocoder();
 
@@ -84,7 +84,7 @@
                        });
           marker.setMap(map);
         });
-            
+
 
 
         document.getElementById('submit').addEventListener('click', function() {
@@ -102,7 +102,7 @@
               zoom: 1
             });
       }
-    
+
 
         // Try HTML5 geolocation.
         if (navigator.geolocation) {

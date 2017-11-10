@@ -1,3 +1,376 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Post views Index Css
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@mixin transition {
+  -moz-transition: 0.3s ease-in-out all;
+  -o-transition: 0.3s ease-in-out all;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+}
+@mixin filter($filter) {
+  -webkit-filter: $filter;
+  -moz-filter: $filter;
+  -o-filter: $filter;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,900);
+$sm: 480px;
+$md: 768px;
+$lg: 992px;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer,
+.header {
+  //height: 350px;
+  background: #2e2e2e;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+
+  a {
+    color: #fff;
+  }
+  //box-sizing: border-box;
+  @media (min-width: $md) {
+    padding: 100px 30px;
+  }
+
+  h1 {
+    font-size: 4em;
+    font-weight: 300;
+  }
+
+  i.fa {
+    font-size: 4em;
+  }
+
+  .bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  .animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+}
+
+.section {
+  width: 100%;
+  position: relative;
+  //height: 300px;
+  .left,
+  .middle,
+  .right {
+    width: 100%;
+    display: block;
+    color: #fff;
+    box-sizing: border-box;
+    left: 0;
+    padding: 30px;
+    text-align: center;
+    overflow: hidden;
+    @include transition;
+
+    .content {
+      @media (min-width: $sm) {
+        @include vertical-align();
+      }
+    }
+    @media (min-width: $sm) {
+      width: 50%;
+      font-size: 0.9em;
+      padding: 10px;
+      left: 0;
+      float: left;
+      position: absolute;
+    }
+    @media (min-width: $md) {
+      width: 33.33333%;
+      left: 33.33%;
+      padding: 10px;
+    }
+    @media (min-width: $lg) {
+      padding: 30px;
+      font-size: 1em;
+    }
+  }
+
+  &.animate {
+    .left {
+      left: 0;
+      @media (min-width: $sm) {
+        left: 50%;
+      }
+      @media (min-width: $md) {
+        left: 0;
+      }
+    }
+
+    .right {
+      left: 0;
+      @media (min-width: $sm) {
+        left: 50%;
+      }
+      @media (min-width: $md) {
+        left: 66.66%;
+      }
+    }
+  }
+
+  .title {
+    background: tomato;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.55em;
+      margin-bottom: 0.75em;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: darken(tomato, 10%);
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 3px;
+      display: inline-block;
+      @include transition;
+
+      &:hover {
+        background: darken(tomato, 15%);
+      }
+    }
+  }
+
+  .tiles {
+    padding: 0;
+    background: #fff;
+    clear: both;
+    display: none;
+    float: none;
+
+    img {
+      width: 50%;
+      height: 596.66px;
+      float: left;
+      height: auto;
+      opacity: 0.7;
+      @include transition;
+      @include filter(grayscale(100%));
+
+      &:hover {
+        opacity: 1;
+        @include filter(grayscale(0%));
+      }
+    }
+    @media (min-width: $md) {
+      display: block;
+    }
+  }
+
+  .middle {
+    background: slategray;
+    z-index: 2;
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+@-webkit-keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-10px);
+  }
+}
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-20px);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
+}
+// Post View Show
+@import "bourbon";
+
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  @include linear-gradient(-45deg, #6f6c70 5%, #50606d, $fallback: #57abf2);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.recipe-card {
+  background: #fff;
+  margin: 4em auto;
+  width: 90%;
+  max-width: 496px;
+  @include border-top-radius(5px);
+  @include border-bottom-radius(5px);
+
+  aside {
+    position: relative;
+
+    img {
+      @include border-top-radius(5px);
+    }
+
+    .button {
+      background: #57abf2;
+      display: inline-block;
+      position: absolute;
+      top: 80%;
+      right: 3%;
+      width: em(65);
+      height: em(65);
+      border-radius: em(65);
+      line-height: em(65);
+      text-align: center;
+
+      .icon {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  article {
+    padding: 1.25em 1.5em;
+
+    ul {
+      list-style: none;
+      margin: 0.5em 0 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-left: 1em;
+        line-height: 1em;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        .icon {
+          vertical-align: bottom;
+        }
+
+        span:nth-of-type(2) {
+          margin-left: 0.5em;
+          font-size: 0.8em;
+          font-weight: 300;
+          vertical-align: middle;
+          color: #838689;
+        }
+      }
+    }
+
+    h2,
+    h3 {
+      margin: 0;
+      font-weight: 300;
+    }
+
+    h2 {
+      font-size: em(28);
+      color: #222222;
+    }
+
+    h3 {
+      font-size: em(15);
+      color: #838689;
+    }
+
+    p {
+      margin: 1.25em 0;
+      font-size: em(13);
+      font-weight: 400;
+      color: #222222;
+
+      span {
+        font-weight: 700;
+        color: #000000;
+      }
+    }
+
+    .ingredients {
+      margin: 2em 0 0.5em;
+    }
+  }
+
+  .icon {
+    display: inline;
+    display: inline-block;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/recipe-card-icons.svg");
+    background-repeat: no-repeat;
+  }
+
+
+
+
+
+
+
+
+  .icon-users,
+  .icon-users\:regular {
+    background-position: 0 -84px;
+    width: 18px;
+    height: 18px;
+  }
+}
