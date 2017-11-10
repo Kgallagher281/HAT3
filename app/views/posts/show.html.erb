@@ -7,19 +7,20 @@
 	<article>
 
 		<h2><%= @post.title %></h2>
-		<h3>Breakfast</h3>
+		<h3>Beer</h3>
 
 		<ul>
 			<li><span class="icon icon-users"></span><span>1</span></li>
 		</ul>
 
 		<p><%= @post.body %></p>
+    <div class="comment">
 
 		<h3>Comments (<%= @post.comments.size %>)</h3>
     <%= render partial: 'posts/comment', collection: @post.comments.reverse %>
 
     <%=render partial: 'comments/form' %>
-
+    </div>
 	</article>
 
 </div>

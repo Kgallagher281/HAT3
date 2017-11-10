@@ -259,16 +259,22 @@ img {
 .recipe-card {
   background: #fff;
   margin: 4em auto;
-  width: 90%;
-  max-width: 496px;
+  width: 100%;
+  max-width: 796px;
   @include border-top-radius(5px);
   @include border-bottom-radius(5px);
+  padding-top: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   aside {
     position: relative;
 
     img {
-      @include border-top-radius(5px);
+      @include border-top-radius(2px);
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 60%
     }
 
     .button {
@@ -337,8 +343,8 @@ img {
     }
 
     p {
-      margin: 1.25em 0;
-      font-size: em(13);
+      margin: 2em 0;
+      font-size: 1.2em;
       font-weight: 400;
       color: #222222;
 
@@ -361,16 +367,20 @@ img {
   }
 
 
-
-
-
-
-
-
   .icon-users,
   .icon-users\:regular {
     background-position: 0 -84px;
     width: 18px;
     height: 18px;
+  }
+
+  .comment {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    h3{
+      font-size: 1.5em;
+    }
   }
 }

@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 20171109141220) do
     t.text "description"
     t.text "food"
     t.integer "price"
+    t.string "photo_file_name"
+    t.string "photo_content_type"
+    t.integer "photo_file_size"
+    t.datetime "photo_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
