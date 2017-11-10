@@ -112,7 +112,8 @@ Beer.create!([
 	name: "Tactical Nuclear Penguin",
 	description: "A happy accident if ever there was one, this beer began with a failed batch of Old Gnarlywine in 1997. The yeast ate up the brown sugar for an extra dose of boozy goodness without overpowering the plentiful hops.",
 	food: "Pairs nicely with a steak or stew",
-	price: 20
+	price: 20,
+	photo: open('https://www.brewdog.com/files/1439813797TNPbottles.jpg')
 
 },
 {
@@ -120,7 +121,9 @@ Beer.create!([
 	name: "Black Damnation",
 	description: "This is what an English Old Stock should taste like. A few bottles of this traditional wassail will make any family feast a bit jollier—even if it includes black pudding.",
 	food: "Pairs nicely with anything",
-	price: 10
+	price: 10,
+	photo: open('http://cdn.blog.hu/pi/pivo/image/10.jpg')
+
 },
 
 {
@@ -128,7 +131,8 @@ Beer.create!([
 	name: "Wolf",
 	description: "White implies winter, and a growing trend among breweries is to offer a white IPA (a very recent invention involving the base of a Belgian-style witbier with aggressive American-IPA hops) during the colder months. New Belgium uses Mosaic and Amarillo varietals for an easy-drinking twist on winter.",
 	food: "Pairs nicely with anything",
-	price: 15
+	price: 15,
+	photo: open('https://beaus.ca/wp-content/uploads/2017/05/wag-the-wolf-2017.jpg')
 },
 {
 
@@ -136,7 +140,8 @@ Beer.create!([
 	name: "Paddles",
 	description: "A roasty brown ale with slight hints of coffee finishes fresh and clean.",
 	food: "Pairs nicely with anything",
-	price: 12
+	price: 12,
+	photo: open('http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/8460H.jpg?itok=RFgjYoS5')
 },
 
 {
@@ -144,7 +149,38 @@ Beer.create!([
 	name: "Snake Venom",
 	description: "The true menaing of death in a bottle.  Containing the strongest beer ever produced.  Buyer beware this will certainly poison your world.",
 	food: "Eating after this beer may not even be an option",
-	price: 25
+	price: 25,
+	photo: open('http://drinksfeed.com/wp-content/blogs.dir/1/files/2017/08/snake_venom_beer.jpg')
+
+},
+
+{
+	id: 6,
+	name: "Harpoon Winter Warmer",
+	description: "Cinnamon and nutmeg in a beer. When we first introduced this beer, let’s just say that people weren’t exactly sure what to make of it. But after close to three decades of brewing this classic, there is no greater fervor for any of our seasonal beers than this one right here. Bring on the spice!.",
+	food: "Eating after this beer may not even be an option",
+	price: 25,
+	photo: open('https://wwwimageslive.harpoonbrewery.com/Winter-Warmer-Modal-NEW-.jpg?mw400-mh800')
+
+},
+
+{
+	id: 7,
+	name: "Blue Paddle Pilsner",
+	description: "Blue Paddle Pilsener-Lager, is a Czech style pilsener with a refreshing crispness from noble hops and a rich, malty finish. With more body than a traditional Belgian pils, Blue Paddle is reflective of Europe’s finest pilseners.	",
+	price: 25,
+	photo: open('http://tabletennisnation.com/wp-content/uploads/2014/07/blue-paddle-new-belgium.png')
+
+},
+
+{
+	id: 8,
+	name: "Harpoon Fresh Tracks",
+	description: "Our parking lot is a great gauge of the weather here at the brewery, especially during the spring months. One day the car racks will be loaded with mountain bikes and the next, skis and snowboards. You pretty much never know what you’re going to get in the New England spring, so we’re ready for everything.
+	Hop forward without being bitter, this single hop Pale Ale showcases the piney, citrusy character of Centennial hops. Bright and golden, light and drinkable, the subtle malt flavor lets the hops shine.",
+	price: 25,
+	photo: open('http://wwwimages.harpoonbrewery.com/Fresh-Tracks-Photo.jpg')
+
 }
 
 ])

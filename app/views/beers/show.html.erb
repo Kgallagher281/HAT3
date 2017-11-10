@@ -1,3 +1,55 @@
+<main class="containershow">
+
+  <!-- Left Column / Headphones Image -->
+  <div class="left-column">
+    <%= image_tag @beer.photo.url(:medium), class: "img" %>
+  </div>
+
+
+  <!-- Right Column -->
+  <div class="right-column">
+
+    <!-- Product Description -->
+    <div class="product-description">
+      <span>Beer</span>
+      <h1><%= @beer.name %></h1>
+      <p><%= @beer.description %></p>
+    </div>
+
+    <!-- Product Configuration -->
+    <div class="product-configuration">
+
+
+    </div>
+
+    <!-- Product Pricing -->
+    <div class="product-price">
+      <span>$<%= @beer.price %></span>
+      <a href="#" class="cart-btn">Add to cart</a>
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -42,7 +94,7 @@
   </head>
   <body>
   	<div id="floating-panel">
-      <input id="address" type="textbox" value="Sydney, NSW">
+      <input id="address" type="textbox" value="New York, NY">
       <input id="submit" type="button" value="Geocode">
     </div>
 
@@ -74,7 +126,7 @@
               zoom: 1
             });
       }
-    
+
 
         // Try HTML5 geolocation.
         if (navigator.geolocation) {

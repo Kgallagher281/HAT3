@@ -1,31 +1,14 @@
-<p id="notice"><%= notice %></p>
+<% @beers.each do |beer| %>
 
-<h1>Beers</h1>
+<figure class="snip1577 hover">
+  <%= image_tag beer.photo.url(:medium), class: "img" %>
+  <figcaption>
+    <h3><%= beer.name %></h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Food</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @beers.each do |beer| %>
-      <tr>
-        <td><%= beer.name %></td>
-        <td><%= beer.description %></td>
-        <td><%= beer.food %></td>
-        <td><%= link_to 'Show', beer %></td>
-        <td><%= link_to 'Edit', edit_beer_path(beer) %></td>
-        <td><%= link_to 'Destroy', beer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+  </figcaption>
+  <%= link_to 'Show', beer %>
+</figure>
+<% end %>
+---------------------------------------
 
 <%= link_to 'New Beer', new_beer_path %>

@@ -73,3 +73,13 @@ $(function() {
     }
   });
 });
+
+// --------- Beer index js -----
+
+
+
+$(".hover").mouseleave(
+  function() {
+    $(this).removeClass("hover");
+  }
+);
