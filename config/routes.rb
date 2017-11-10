@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   resources :beer_locations
   resources :locations
   devise_for :users
