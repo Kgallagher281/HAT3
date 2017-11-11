@@ -9,37 +9,22 @@
   </head>
 
   <body>
-
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container">
-        <a class="navbar-brand">HAT3</a>
-
+<nav>
         <% if user_signed_in?%>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <span class="sr-only"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></span>
-          </li>
-          <div class="nav">
-          <li class="nav-item">
+            <span><%= link_to "HAT3", users_path %></span>
             <span><%= link_to "Beers", beers_path %></span>
             <span><%= link_to "Posts",  posts_path %></span>
             <span><%= link_to "Beer Locations",  locations_path %></span>
-            <span><%= link_to "Contact Us", contacts_path %></span>
+            <span><%= link_to "About Us", contacts_path %></span>
             <span><%= link_to "Parent Company", "https://www.captainlawrencebrewing.com" %></span>
+           <span> <%= link_to 'Login', new_user_session_path %></span>
+           <% end %>
           </li>
         </ul>
       </div>
-
-
-        <% else %>
-        <%= link_to 'login', new_user_session_path %>
-        <% end %>
-
-
+      <% else %>
       </div>
-
-
-    </nav>
+  </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
