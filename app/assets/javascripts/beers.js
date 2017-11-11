@@ -11,3 +11,13 @@
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+
+
+$(document).ready(function(e) {
+      $('#foodpairingtext').hover(function(){
+      $main_text=$(this).text();
+      $(this).text(<%= @beer.food %>);
+    },function(){
+      $(this).text($main_text);
+      });
+  });
