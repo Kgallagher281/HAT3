@@ -50,6 +50,48 @@
         margin: 0;
         padding: 0;
       }
+      .controls {
+        background-color: #fff;
+        border-radius: 2px;
+        border: 1px solid transparent;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        box-sizing: content-box;
+        font-family: sans-serif;
+        font-size: 10px;
+        font-weight: 200;
+        height: 20px;
+        margin-left: 17px;
+        margin-top: 10px;
+        outline: none;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 400px;
+      }
+
+      .controls:focus {
+        border-color: #4d90fe;
+      }
+      .title {
+        font-weight: bold;
+      }
+      #infowindow-content {
+        display: none;
+      }
+      #map #infowindow-content {
+        display: inline;
+      }
+
+    </style>
+  </head>
+  <body>
+    <input id="pac-input" class="controls" type="text"
+        placeholder="Enter a location">
+    <div id="map"></div>
+    <div id="infowindow-content">
+      <span id="place-name"  class="title"></span><br>
+      Place ID <span id="place-id"></span><br>
+      <span id="place-address"></span>
+    </div>
     </style>
   </head>
   <body>
@@ -70,18 +112,18 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -34.397, lng: 150.644},
-          zoom: 7
+          zoom: 10
         });
-        var geocoder = new google.maps.Geocoder();
-
 
         const locations = <%= raw @locations.map{|loc| loc.to_h}.to_json %>;
 
        locations.forEach( function(location){
-          var marker = new google.maps.Marker({
+        var marker = new google.maps.Marker({
                         map: map,
-                        position: location
-                       });
+                        position: location,
+                        draggable:true,
+
+              });
           marker.setMap(map);
         });
 
@@ -90,6 +132,53 @@
         document.getElementById('submit').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
       })
+        var input = document.getElementById('pac-input');
+
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo('bounds', map);
+
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        var infowindow = new google.maps.InfoWindow();
+        var infowindowContent = document.getElementById('infowindow-content');
+        infowindow.setContent(infowindowContent);
+        var marker = new google.maps.Marker({
+          map: map
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+        autocomplete.addListener('place_changed', function() {
+          infowindow.close();
+          var place = autocomplete.getPlace();
+          if (!place.geometry) {
+            return;
+          }
+
+          if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+          } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17);
+          }
+
+          // Set the position of the marker using the place ID and location.
+          marker.setPlace({
+            placeId: place.place_id,
+            location: place.geometry.location
+          });
+          marker.setVisible(true);
+
+          infowindowContent.children['place-name'].textContent = place.name;
+          infowindowContent.children['place-id'].textContent = place.place_id;
+          infowindowContent.children['place-address'].textContent =
+              place.formatted_address;
+          infowindow.open(map, marker);
+        });
+      }
+       var geocoder = new google.maps.Geocoder();
+
         infoWindow = new google.maps.InfoWindow;
 
       var panorama;
@@ -123,7 +212,7 @@
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
-      }
+      
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
