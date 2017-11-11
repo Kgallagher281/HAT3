@@ -83,3 +83,16 @@ $(".hover").mouseleave(
     $(this).removeClass("hover");
   }
 );
+
+
+
+// foodpairingtext js
+
+$(document).ready(function(e) {
+      $('#foodpairingtext').hover(function(){
+      $main_text=$(this).text();
+      $(this).text('Pairs nicely with anything');
+    },function(){
+      $(this).text($main_text);
+      });
+  });
