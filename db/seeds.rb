@@ -122,7 +122,9 @@ Beer.create!([
 	name: "Tactical Nuclear Penguin",
 	description: "A happy accident if ever there was one, this beer began with a failed batch of Old Gnarlywine in 1997. The yeast ate up the brown sugar for an extra dose of boozy goodness without overpowering the plentiful hops.",
 	food: "Pairs nicely with a steak or stew",
-	price: 20,
+	price6: 20,
+	price12: 38,
+	pricecase: 65,
 	photo: open('https://www.brewdog.com/files/1439813797TNPbottles.jpg'),
 	abv: 32,
 	ibu: 5
@@ -132,7 +134,9 @@ Beer.create!([
 	name: "Black Damnation",
 	description: "This is what an English Old Stock should taste like. A few bottles of this traditional wassail will make any family feast a bit jollier even if it includes black pudding.",
 	food: 'Pairs nicely with anything',
-	price: 10,
+	price6: 25,
+	price12: 46,
+	pricecase: 70,
 	photo: open('http://cdn.blog.hu/pi/pivo/image/10.jpg'),
 	abv: 39,
 	ibu: 7
@@ -143,7 +147,9 @@ Beer.create!([
 	name: "Wolf",
 	description: "White implies winter, and a growing trend among breweries is to offer a white IPA (a very recent invention involving the base of a Belgian-style witbier with aggressive American-IPA hops) during the colder months. New Belgium uses Mosaic and Amarillo varietals for an easy-drinking twist on winter.",
 	food: "Pairs nicely with anything",
-	price: 15,
+	price6: 22,
+	price12: 44,
+	pricecase: 68,
 	photo: open('https://beaus.ca/wp-content/uploads/2017/05/wag-the-wolf-2017.jpg'),
 	abv: 36,
 	ibu: 6
@@ -154,7 +160,9 @@ Beer.create!([
 	name: "Paddles",
 	description: "A roasty brown ale with slight hints of coffee finishes fresh and clean.",
 	food: "Pairs nicely with anything",
-	price: 12,
+	price6: 14,
+	price12: 26,
+	pricecase: 50,
 	photo: open('http://www.thebeerstore.ca/sites/default/files/styles/brand_hero/public/sbs/brand/8460H.jpg?itok=RFgjYoS5'),
 	abv: 16,
 	ibu: 8
@@ -165,7 +173,9 @@ Beer.create!([
 	name: "Snake Venom",
 	description: "The true menaing of death in a bottle.  Containing the strongest beer ever produced.  Buyer beware this will certainly poison your world.",
 	food: "Eating after this beer may not even be an option",
-	price: 25,
+	price6: 40,
+	price12: 80,
+	pricecase: 110,
 	photo: open('http://drinksfeed.com/wp-content/blogs.dir/1/files/2017/08/snake_venom_beer.jpg'),
 	abv: 68,
 	ibu: 30
@@ -177,7 +187,9 @@ Beer.create!([
 	name: "Winter Warmer",
 	description: "Cinnamon and nutmeg in a beer. When we first introduced this beer, lets just say that people were not exactly sure what to make of it. But after close to three decades of brewing this classic, there is no greater fervor for any of our seasonal beers than this one right here. Bring on the spice!.",
 	food: "Eating after this beer may not even be an option",
-	price: 25,
+	price6: 12,
+	price12: 18,
+	pricecase: 32,
 	photo: open('https://wwwimageslive.harpoonbrewery.com/Winter-Warmer-Modal-NEW-.jpg?mw400-mh800'),
 	abv: 5.9,
 	ibu: 22
@@ -188,7 +200,9 @@ Beer.create!([
 	id: 7,
 	name: "Blue Paddle Pilsner",
 	description: "Blue Paddle Pilsener-Lager, is a Czech style pilsener with a refreshing crispness from noble hops and a rich, malty finish. With more body than a traditional Belgian pils, Blue Paddle is reflective of Europes finest pilseners.	",
-	price: 25,
+	price6: 9,
+	price12: 19,
+	pricecase: 30,
 	photo: open('http://tabletennisnation.com/wp-content/uploads/2014/07/blue-paddle-new-belgium.png'),
 	abv: 4.8,
 	ibu: 11
@@ -200,7 +214,9 @@ Beer.create!([
 	name: "Fresh Tracks",
 	description: "Our parking lot is a great gauge of the weather here at the brewery, especially during the spring months. One day the car racks will be loaded with mountain bikes and the next, skis and snowboards. You pretty much never know what you’re going to get in the New England spring, so we’re ready for everything.
 	Hop forward without being bitter, this single hop Pale Ale showcases the piney, citrusy character of Centennial hops. Bright and golden, light and drinkable, the subtle malt flavor lets the hops shine.",
-	price: 25,
+	price6: 11,
+	price12: 23,
+	pricecase: 40,
 	photo: open('http://wwwimages.harpoonbrewery.com/Fresh-Tracks-Photo.jpg'),
 	abv: 6.2,
 	ibu: 38
