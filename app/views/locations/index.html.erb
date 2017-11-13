@@ -119,15 +119,19 @@
         });
 
         const locations = <%= raw @locations.map{|loc| loc.to_h}.to_json %>;
-
-       locations.forEach( function(location){
+        locations.forEach( function(location){
         var marker = new google.maps.Marker({
                         map: map,
                         position: location,
-                        draggable:true,
-
-              });
+            
+          });
+         var infowindow = new google.maps.InfoWindow({ 
+          content:`<p><h6>${location.name}</h6> ${location.address}</p>`
+        });
           marker.setMap(map);
+          marker.addListener('click', function(){
+            infowindow.open(map.marker)
+          });
         });
 
 
@@ -136,11 +140,6 @@
           geocodeAddress(geocoder, map);
       })
 
-  
-  
-  for(var i = 0; i < restaurants.length; i++){
-    addMarker(restaurants[i]);
-  }
         var input = document.getElementById('pac-input');
 
         var autocomplete = new google.maps.places.Autocomplete(input);
