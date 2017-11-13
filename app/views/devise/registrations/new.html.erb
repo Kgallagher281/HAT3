@@ -1,12 +1,13 @@
-<h2>Sign up</h2>
+<div class="SignupShadowBox"></div>
+<br><br><h4>Sign up to continue</h4>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<br><center><i class="em em-christmas_tree"></i> <i class="em em-snowman"></i> <i class="em em-christmas_tree"></i>
+
+<br><center><%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-
-
   <div class="field">
-    <%= f.label :fname %>
+    <br><%= f.label :fname %>
     <%= f.text_field :fname, id: :user_fname %>
   </div>
 
@@ -39,8 +40,12 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: 'btn btn-info' %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%#= render "devise/shared/links" %>
+
+<div class="UsersSnow-img"><div>
+<div class="LoginBeersBackground-img"><div>
+
