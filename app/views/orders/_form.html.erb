@@ -1,13 +1,13 @@
 <%= form_with(model: order, local: true) do |form| %>
 <div class="user">
     <header class="user__header">
-        <img src="" alt=""/>
+        <img src="https://harrisonpensa.com/wp-content/uploads/2015/07/ThinkstockPhotos-480775382.jpg" alt="" class="form-image"/>
         <h1 class="user__title">Check Out</h1>
     </header>
 
     <form class="form">
         <div class="form__group">
-            <input type="text" placeholder="Username" class="form__input" />
+            <input type="text" placeholder="Name" class="form__input" />
         </div>
 
         <div class="form__group">
@@ -24,55 +24,9 @@
           <!-- id: :order_pay_type -->
         </div>
 
-        <div class="actions">
-          <%= form.submit 'Place Order' %>
-        </div>
+
+          <%= form.submit 'Place Order', :class => "form-actions"%>
+
     </form>
 </div>
 <% end %>
-<!-- fkjskljfsjjfklsjklfjlkjklfjslfjldlfjdlksjfldsjlkjflksjklfjsdlfjls -->
-
-<%= form_with(model: order, local: true) do |form| %>
-<% if order.errors.any? %>
-<div id="error_explanation">
-  <h2><%= pluralize(order.errors.count, "error") %>
-    prohibited this order from being saved:</h2>
-
-  <ul>
-    <% order.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-</div>
-<% end %>
-
-<div class="container-form-check-out">
-<h1>FORM HERE</h1>
-
-<div class="field" style="red">
-  <%= form.label :name %>
-  <%= form.text_field :name, id: :order_name, size: 40, class: "form__input"  %>
-</div>
-
-<div class="form__group">
-  <%= form.label :address %>
-  <%= form.text_area :address, id: :order_address, class: "form__input" %>
-</div>
-
-<div class="form__group">
-  <%= form.label :email %>
-  <%= form.text_field :email, id: :order_email, size: 40, class: "form__input" %>
-</div>
-
-<div class="form__group">
-  <%= form.label :pay_type %>
-  <%= form.select :pay_type, Order.pay_types.keys, prompt: "Select a payment method" %>
-  <!-- id: :order_pay_type -->
-</div>
-
-<div class="actions">
-  <%= form.submit 'Place Order' %>
-</div>
-<% end %>
-
-</div>
