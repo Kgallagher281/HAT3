@@ -1,11 +1,30 @@
+<div class="UsersShadowBox"></div>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
-<div class="usernav"><% if user_signed_in? %>
+<div class="usernav">
+  <% if user_signed_in? %>
   <li><%= link_to 'Sign Out', { :action=>"destroy", :controller=>"devise/sessions" }, method: :delete %></li>
   <% else %>
-  <li><%= link_to "Register", new_user_registration_path %></li>
-  <li><%= link_to "Log In", new_user_session_path %></li></ul>
-  <% end %>
 </div>
+
+<!--   <div class="Content"> -->
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <h4>New Users Please Click Below</h4>
+      <center><div class="new-user-btns">
+      <%= link_to "Register", new_user_registration_path, class: 'btn btn-info' %><br>
+  <br><h4>Existing Users Welcome Back! Please Click Below</h4>
+    <center><div class="new-user-btns">
+    <%= link_to "Log In", new_user_session_path, class: 'btn btn-info'%>
+  <% end %>
+</div></center></div>
+
+  <div class="UsersBeer-img"></div>
+  <div class="UsersSnow-img">
+    <div class="logo-img">
+    <%= image_tag "CapLawLogo.png"%></div>
+    <div class="hat3-img">
+    <%= image_tag "Hat3.jpg", width: "156"%></div>
+  </div>
+  <div class="BeersBackground-img"><div>
 
