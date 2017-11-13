@@ -1,10 +1,5 @@
-// Place all the styles related to the beers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-@import url(https://fonts.googleapis.com/css?family=Montserrat:200);
-
 .snip1577 {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -14,8 +9,8 @@
   width: 100%;
   color: #fff;
   text-align: left;
-  font-size: 16px;
-  background: #000;
+  font-size: 20px;
+  background: #c2c4d1;
 }
 
 .snip1577 *,
@@ -29,7 +24,7 @@
 
 .snip1577 img {
   max-width: 100%;
-  backface-visibility: hidden;
+  backface-visibility: hidden ;
   vertical-align: top;
 }
 
@@ -88,7 +83,7 @@
   zoom: 1;
   filter: alpha(opacity=20);
   -webkit-opacity: 0.2;
-  opacity: 0.2;
+  opacity: 0.6;
 }
 
 .snip1577.hover:after,
@@ -122,11 +117,7 @@
   transition-delay: 0.3s;
 }
 
-.snip1577.hover h4,
-.snip1577:hover h4 {
-  -webkit-transition-delay: 0.35s;
-  transition-delay: 0.35s;
-}
+
 // Show
 /* Basic Styling */
 body,
@@ -139,7 +130,7 @@ html {
 
 .containershow {
   width: 60%;
-  height: 70%;
+  height: 80%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 15px;
@@ -150,6 +141,7 @@ html {
 
 .left-column {
   width: 65%;
+  height: 90%;
   position: relative;
 }
 
@@ -159,7 +151,8 @@ html {
 }
 /* Left Column */
 .left-column img {
-  width: 90%;
+  width: 80%;
+  height: 95%;
   position: absolute;
   left: 0;
   top: 0;
@@ -174,7 +167,7 @@ html {
 /* Product Description */
 .product-description {
   border-bottom: 1px solid #E1E8EE;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .product-description span {
@@ -187,9 +180,9 @@ html {
 
 .product-description h1 {
   font-weight: 300;
-  font-size: 30px;
+  font-size: 28px;
   color: #43484D;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 
 .product-description p {
@@ -201,13 +194,15 @@ html {
 /* Product Color */
 .product-color {
   margin-bottom: 30px;
+  text-align: left;
+  font-size: 15px;
 }
 
 .color-choose div {
   display: inline-block;
 }
 .color-choose span {
-  font-size: 10px
+  font-size: 15px
 }
 
 /* Cable Configuration */
@@ -245,6 +240,9 @@ html {
   position: relative;
   margin: 10px 0;
   display: inline-block;
+}
+.cable-config span {
+  align-items: flex-start;
 }
 
 .foodpairing{

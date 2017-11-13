@@ -29,6 +29,7 @@ class BeersController < ApplicationController
     respond_to do |format|
       if @beer.save
         format.html { redirect_to @beer, notice: 'Beer was successfully created.' }
+        format.js {@current_beer = @beer_cart}
         format.json { render :show, status: :created, location: @beer }
       else
         format.html { render :new }
@@ -44,6 +45,11 @@ class BeersController < ApplicationController
       if @beer.update(beer_params)
         format.html { redirect_to @beer, notice: 'Beer was successfully updated.' }
         format.json { render :show, status: :ok, location: @beer }
+
+        @beers = Beer.all
+        ActionCable.server.broadcast 'beers',
+          html: render_to_string('store/index',layout: false)
+        
       else
         format.html { render :edit }
         format.json { render json: @beer.errors, status: :unprocessable_entity }
