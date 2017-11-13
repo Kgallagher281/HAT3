@@ -142,8 +142,13 @@ body {
     }
 
     p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 500px;
       line-height: 1.55em;
       margin-bottom: 0.75em;
+
     }
 
     .btn-primary {
@@ -233,9 +238,8 @@ body {
     transform: translateY(-10px);
   }
 }
-// Post View Show
+// ------------- Post View Show ----------
 @import "bourbon";
-
 * {
   @include box-sizing(border-box);
 }
@@ -300,13 +304,13 @@ img {
 
     ul {
       list-style: none;
-      margin: 0.5em 0 0;
+      margin: 0 0 0;
       padding: 0;
 
       li {
         display: inline-block;
-        margin-left: 1em;
-        line-height: 1em;
+        margin-left: 10px;
+        line-height: .2em;
 
         &:first-child {
           margin-left: 0;
@@ -314,11 +318,13 @@ img {
 
         .icon {
           vertical-align: bottom;
+          margin-top: 20px;
+          margin-bottom: 10px;
         }
 
         span:nth-of-type(2) {
-          margin-left: 0.5em;
-          font-size: 0.8em;
+          margin-left: -3.5em;
+          font-size: 1.3em;
           font-weight: 300;
           vertical-align: middle;
           color: #838689;
@@ -326,8 +332,7 @@ img {
       }
     }
 
-    h2,
-    h3 {
+    h2{
       margin: 0;
       font-weight: 300;
     }
@@ -337,25 +342,20 @@ img {
       color: #222222;
     }
 
-    h3 {
-      font-size: em(15);
-      color: #838689;
-    }
-
     p {
-      margin: 2em 0;
-      font-size: 1.2em;
-      font-weight: 400;
+
+      margin: 0.5em;
+      font-size: 1.1em;
+      font-weight: 200;
       color: #222222;
+      margin-bottom: 25px;
+
 
       span {
         font-weight: 700;
         color: #000000;
+        margin: 0
       }
-    }
-
-    .ingredients {
-      margin: 2em 0 0.5em;
     }
   }
 
@@ -370,7 +370,7 @@ img {
   .icon-users,
   .icon-users\:regular {
     background-position: 0 -84px;
-    width: 18px;
+    width: 15px;
     height: 18px;
   }
 
@@ -378,9 +378,8 @@ img {
     margin-left: auto;
     margin-right: auto;
     display: block;
-
     h3{
-      font-size: 1.5em;
+      font-size: 1em;
     }
   }
 }

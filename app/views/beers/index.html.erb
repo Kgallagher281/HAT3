@@ -4,11 +4,10 @@
   <%= image_tag beer.photo.url(:medium), class: "img" %>
   <figcaption>
     <h3><%= beer.name %></h3>
-
   </figcaption>
   <%= link_to 'Show', beer %>
 </figure>
 <% end %>
----------------------------------------
+
 
 <%= link_to 'New Beer', new_beer_path %>

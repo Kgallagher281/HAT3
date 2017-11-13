@@ -6,7 +6,7 @@
 <% @posts.each do |post| %>
 <div class="section animate">
   <div class="middle">
-      <%= image_tag post.photo.url(:medium), class: "img" %>
+      <%= image_tag post.photo.url(:large), class: "img" %>
   </div>
   <div class="left title">
     <div class="content">
@@ -28,50 +28,8 @@
   <a href="#top" class="scrollTo">
     <i class="fa fa-angle-up animated bounce"></i>
   </a>
-  <h1>Scroll Up</h1>
+
 </div>
-
---------------------------------
-<p id="notice"><%= notice %></p>
-
-<h1>
-  HAT3 Posts
-</h1>
-<% @posts.each do |post| %>
-  <main role="main" id="main">
-
-    <section class="tiles-a">
-      <ul>
-
-        <li>
-          <a href="#" style="background: url('https://unsplash.it/600/600?image=120'); background-size: cover;" aria-controls="aside" aria-expanded="false">
-            <div class="details visually-hidden">
-              <div class="">
-                <%= image_tag post.photo.url(:medium) %>
-              </div>
-
-              <div class="text-copy wrapper">
-                <h3><%= post.title %></h3>
-                <p><%= post.body %></p>
-                <p><%= link_to 'Show', post %></p>
-                <p><%= link_to 'Edit', edit_post_path(post) %></p>
-                <p><%= link_to 'Destroy', post, method: :delete %></p>
-              </div>
-            </div>
-          </a>
-        </li>
-
-      </ul>
-    </section>
-<% end %>
-</main>
-
-<aside role="complementary" id="aside" aria-hidden="true" aria-expanded="false">
-  <a href="#" class="close"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/close-white-thin.svg" alt="Close button">
-    <span class="visually-hidden">Return to Top</span></a>
-  <div class="aside--details" tabindex="0" aria-live="polite" aria-atomic="true" aria-label="Image details"></div>
-</aside>
-------------------------------------------------------------------
 <br>
 
 <%= link_to 'New Post', new_post_path %>
