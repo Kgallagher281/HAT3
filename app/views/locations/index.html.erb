@@ -13,8 +13,10 @@
   </thead>
 
   <tbody>
+  <% if user_signed_in? %>
+  <% end %>
     <% @locations.each do |location| %>
-      <tr>
+     <tr>
         <td><%= location.name %></td>
         <td><%= location.address %></td>
         <td><%= location.created_at.in_time_zone(-4).strftime("%A, %b %e, %Y") %></td>
@@ -27,6 +29,7 @@
 </table>
 
 <br>
+
 
 <%= link_to 'New Location', new_location_path %>
 
@@ -237,7 +240,7 @@
           }
         });
       }
-  setTimeout(initMap, 10);
+  setTimeout(initMap, 5);
 
 
 
