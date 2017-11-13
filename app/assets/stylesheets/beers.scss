@@ -12,22 +12,11 @@
   font-size: 20px;
   background: #c2c4d1;
 }
-
-.snip1577 *,
-.snip1577:after,
-.snip1577:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
 .snip1577 img {
   max-width: 100%;
   backface-visibility: hidden ;
   vertical-align: top;
 }
-
 .snip1577:after,
 .snip1577:before {
   position: absolute;
@@ -38,24 +27,20 @@
   z-index: 1;
   opacity: 0;
 }
-
 .snip1577:before {
   width: 0;
   height: 1px;
 }
-
 .snip1577:after {
   height: 0;
   width: 1px;
 }
-
 .snip1577 figcaption {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
   padding: 15px 20px;
 }
-
 .snip1577 h3,
 .snip1577 h4 {
   margin: 0;
@@ -63,12 +48,10 @@
   font-weight: normal;
   opacity: 0;
 }
-
 .snip1577 h4 {
   font-size: 0.8em;
   text-transform: uppercase;
 }
-
 .snip1577 a {
   position: absolute;
   top: 0;
@@ -77,7 +60,6 @@
   right: 0;
   z-index: 1;
 }
-
 .snip1577.hover img,
 .snip1577:hover img {
   zoom: 1;
@@ -85,7 +67,6 @@
   -webkit-opacity: 0.2;
   opacity: 0.6;
 }
-
 .snip1577.hover:after,
 .snip1577.hover:before,
 .snip1577:hover:after,
@@ -94,31 +75,25 @@
   -webkit-transition-delay: 0.25s;
   transition-delay: 0.25s;
 }
-
 .snip1577.hover:before,
 .snip1577:hover:before {
   width: 40px;
 }
-
 .snip1577.hover:after,
 .snip1577:hover:after {
   height: 40px;
 }
-
-
 .snip1577.hover h3,
 .snip1577:hover h3 {
   opacity: 1;
 }
-
 .snip1577.hover h3,
 .snip1577:hover h3 {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
 
-
-// Show
+// ========== Show ============================
 /* Basic Styling */
 body,
 html {
@@ -165,84 +140,55 @@ html {
   opacity: 1;
 }
 /* Product Description */
-.product-description {
+.beer-description {
   border-bottom: 1px solid #E1E8EE;
   margin-bottom: 15px;
 }
-
-.product-description span {
+// ===== Beer Description =======
+.beer-description span {
   font-size: 8px;
   color: #358ED7;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
 }
-
-.product-description h1 {
+.beer-description h1 {
   font-weight: 300;
   font-size: 28px;
   color: #43484D;
   letter-spacing: -1px;
 }
-
-.product-description p {
+.beer-description p {
   font-size: 12px;
   font-weight: 200;
   color: #86939E;
   line-height: 24px;
 }
-/* Product Color */
-.product-color {
+/* Beer Info */
+.beer-color {
   margin-bottom: 30px;
   text-align: left;
   font-size: 15px;
 }
-
-.color-choose div {
+.beer-choose div {
   display: inline-block;
 }
-.color-choose span {
+.beer-choose span {
   font-size: 15px
 }
 
 /* Cable Configuration */
-.cable-choose {
-  margin-bottom: 10px;
-}
-
-.cable-choose button {
+.beer-choose p {
   border: 2px solid #E1E8EE;
   border-radius: 6px;
-  padding: 8px 13px;
+  padding: 3px 2px;
   font-size: 10px;
   color: #5E6977;
   background-color: #fff;
-  cursor: pointer;
-  transition: all 0.5s;
 }
-
-.cable-choose button:active,
-.cable-choose button:focus,
-.cable-choose button:hover {
-  border: 2px solid #86939E;
-  outline: none;
-}
-
 .cable-config {
   border-bottom: 1px solid #E1E8EE;
   margin-bottom: 20px;
-}
-
-.cable-config a {
-  color: #358ED7;
-  text-decoration: none;
-  font-size: 12px;
-  position: relative;
-  margin: 10px 0;
-  display: inline-block;
-}
-.cable-config span {
-  align-items: flex-start;
 }
 
 .foodpairing{

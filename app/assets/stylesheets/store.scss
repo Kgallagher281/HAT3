@@ -5,14 +5,9 @@ $button-shadow-color: darken($button-color, 25%);
 $cursive-font: 'Roboto';
 $font-size: 18px;
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
 body {
   background-color: $bg-color;
 }
-
 .product-card {
   background-color: #fdfefe;
   max-width: 550px;
@@ -27,7 +22,6 @@ body {
   font-size: $font-size;
   position: relative;
 }
-
 .product-details {
   width: 53%;
   float: left;
@@ -36,14 +30,19 @@ body {
   h1 {
     color: #333;
     font-family: $cursive-font;
-    margin-bottom: 35px;
+    margin-bottom: 18px;
   }
-  button {
-    width: 150px;
-    height: 50px;
+  span{
+    font-size: 17px;
+  }
+  .store-button {
+    font-size: 10px;
+    width: 100px;
+    height: 40px;
     margin-top: 20px;
+    margin-left: 15px;
     background-color: $button-color;
-    border-radius: 0;
+    border-radius: 5px;
     color: #fff;
     box-shadow: 2px 2px 7px $button-shadow-color;
     &:hover, &:active, &:focus {
@@ -51,16 +50,14 @@ body {
     }
   }
 }
-
 .product-image {
   position: absolute;
-  right: -50px;
-  top: -10px;
+  right: 20px;
+  top: 20px;
   img {
-    max-width: 350px;
+    max-width: 320px;
   }
 }
-
 @media (max-width: 700px) {
   .product-card {
     margin-left: 20px;
@@ -68,7 +65,6 @@ body {
   }
 
 }
-
 @media (max-width: 540px) {
   .product-card {
     overflow: hidden;
@@ -84,13 +80,11 @@ body {
     top: -30px;
   }
 }
-
 @media (max-width: 440px) {
     .product-details {
       width: 65%;
   }
 }
-
 @media (max-width: 365px) {
     .product-details {
       width: 80%;

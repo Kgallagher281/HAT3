@@ -1,7 +1,3 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-// Post views Index Css
 @mixin vertical-align {
   position: relative;
   top: 50%;
@@ -31,8 +27,8 @@ body {
 
 .footer,
 .header {
-  //height: 350px;
-  background: #2e2e2e;
+  height: 150px;
+  background: #57a4b2;
   color: #fff;
   padding: 30px;
   text-align: center;
@@ -74,7 +70,7 @@ body {
 .section {
   width: 100%;
   position: relative;
-  //height: 300px;
+  height: 300px;
   .left,
   .middle,
   .right {
@@ -111,7 +107,6 @@ body {
       font-size: 1em;
     }
   }
-
   &.animate {
     .left {
       left: 0;
@@ -122,7 +117,6 @@ body {
         left: 0;
       }
     }
-
     .right {
       left: 0;
       @media (min-width: $sm) {
@@ -133,14 +127,12 @@ body {
       }
     }
   }
-
   .title {
-    background: tomato;
+    background: #D3D3D3;
 
     h2 {
       margin-top: 0;
     }
-
     p {
       white-space: nowrap;
       overflow: hidden;
@@ -150,22 +142,7 @@ body {
       margin-bottom: 0.75em;
 
     }
-
-    .btn-primary {
-      color: #fff;
-      background: darken(tomato, 10%);
-      padding: 10px;
-      text-decoration: none;
-      border-radius: 3px;
-      display: inline-block;
-      @include transition;
-
-      &:hover {
-        background: darken(tomato, 15%);
-      }
-    }
   }
-
   .tiles {
     padding: 0;
     background: #fff;
@@ -193,12 +170,13 @@ body {
   }
 
   .middle {
-    background: slategray;
+    background: #F2F2F2;
     z-index: 2;
     padding: 0;
 
     img {
       width: 100%;
+      height: 475px;
       height: auto;
       display: block;
     }
@@ -249,9 +227,7 @@ html {
 }
 
 body {
-  @include linear-gradient(-45deg, #6f6c70 90%, #50606d, $fallback: #57abf2);
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
+
 }
 
 img {
@@ -260,7 +236,7 @@ img {
   vertical-align: bottom;
 }
 
-.recipe-card {
+.post-info {
   background: #fff;
   margin: 4em auto;
   width: 100%;
@@ -279,23 +255,6 @@ img {
       margin-right: auto;
       display: block;
       width: 60%
-    }
-
-    .button {
-      background: #57abf2;
-      display: inline-block;
-      position: absolute;
-      top: 80%;
-      right: 3%;
-      width: em(65);
-      height: em(65);
-      border-radius: em(65);
-      line-height: em(65);
-      text-align: center;
-
-      .icon {
-        vertical-align: middle;
-      }
     }
   }
 
@@ -331,47 +290,20 @@ img {
         }
       }
     }
-
     h2{
       margin: 0;
       font-weight: 300;
-    }
-
-    h2 {
       font-size: em(28);
       color: #222222;
     }
-
     p {
-
       margin: 0.5em;
       font-size: 1.1em;
       font-weight: 200;
       color: #222222;
-      margin-bottom: 25px;
-
-
-      span {
-        font-weight: 700;
-        color: #000000;
-        margin: 0
-      }
+      margin-bottom: 20px;
+      padding: 2px;
     }
-  }
-
-  .icon {
-    display: inline;
-    display: inline-block;
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/recipe-card-icons.svg");
-    background-repeat: no-repeat;
-  }
-
-
-  .icon-users,
-  .icon-users\:regular {
-    background-position: 0 -84px;
-    width: 15px;
-    height: 18px;
   }
 
   .comment {
@@ -379,7 +311,10 @@ img {
     margin-right: auto;
     display: block;
     h3{
-      font-size: 1em;
+      font-size: .7em;
+    }
+    p{
+      padding: 0;
     }
   }
 }

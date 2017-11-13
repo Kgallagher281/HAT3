@@ -2,11 +2,11 @@
 
 <%= form_for [@post, @comment] do |f| %>
 
-<p>
+<p style="font-size: 15px;">
   <%= f.label :author_name , "Your Name"%><br>
   <%=f.text_field :author_name%>
 </p>
-<p>
+<p style="font-size: 15px;">
   <%= f.label :body, "Your Comment"%><br>
   <%=f.text_field :body%>
 </p>
