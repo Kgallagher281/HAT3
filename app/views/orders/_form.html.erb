@@ -1,44 +1,78 @@
 <%= form_with(model: order, local: true) do |form| %>
-  <% if order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+<div class="user">
+    <header class="user__header">
+        <img src="" alt=""/>
+        <h1 class="user__title">Check Out</h1>
+    </header>
 
-      <ul>
-      <% order.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <form class="form">
+        <div class="form__group">
+            <input type="text" placeholder="Username" class="form__input" />
+        </div>
 
-<div class="">
-  <h1>FORM HERE</h1>
+        <div class="form__group">
+            <input type="email" placeholder="Email" class="form__input" />
+        </div>
 
-  <div class="field" style="red">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :order_name, size: 40 %>
-  </div>
+        <div class="form__group">
+            <input type="address" placeholder="Address" class="form__input" />
+        </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_area :address, id: :order_address %>
-  </div>
+        <div class="form__group">
+          <%= form.label :pay_type %>
+          <%= form.select :pay_type, Order.pay_types.keys, prompt: "Select a payment method" %>
+          <!-- id: :order_pay_type -->
+        </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :order_email, size: 40 %>
-  </div>
+        <div class="actions">
+          <%= form.submit 'Place Order' %>
+        </div>
+    </form>
+</div>
+<% end %>
+<!-- fkjskljfsjjfklsjklfjlkjklfjslfjldlfjdlksjfldsjlkjflksjklfjsdlfjls -->
 
-  <div class="field">
-    <%= form.label :pay_type %>
-    <%= form.select :pay_type, Order.pay_types.keys,
-    prompt: "Select a payment method" %>
-    <!-- id: :order_pay_type  -->
-  </div>
+<%= form_with(model: order, local: true) do |form| %>
+<% if order.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(order.errors.count, "error") %>
+    prohibited this order from being saved:</h2>
 
-  <div class="actions">
-    <%= form.submit 'Place Order' %>
-  </div>
+  <ul>
+    <% order.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="container-form-check-out">
+<h1>FORM HERE</h1>
+
+<div class="field" style="red">
+  <%= form.label :name %>
+  <%= form.text_field :name, id: :order_name, size: 40, class: "form__input"  %>
+</div>
+
+<div class="form__group">
+  <%= form.label :address %>
+  <%= form.text_area :address, id: :order_address, class: "form__input" %>
+</div>
+
+<div class="form__group">
+  <%= form.label :email %>
+  <%= form.text_field :email, id: :order_email, size: 40, class: "form__input" %>
+</div>
+
+<div class="form__group">
+  <%= form.label :pay_type %>
+  <%= form.select :pay_type, Order.pay_types.keys, prompt: "Select a payment method" %>
+  <!-- id: :order_pay_type -->
+</div>
+
+<div class="actions">
+  <%= form.submit 'Place Order' %>
+</div>
 <% end %>
 
 </div>
