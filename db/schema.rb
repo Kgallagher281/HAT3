@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20171113043022) do
     t.string "photo_content_type"
     t.integer "photo_file_size"
     t.datetime "photo_updated_at"
+    t.integer "abv"
+    t.integer "ibu"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
