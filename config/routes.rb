@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :line_items
+  resources :orders
+  resources :beer_carts
+  resources :carts
+  get 'store/index'
+
   resources :contacts
   resources :beer_locations
   resources :locations
