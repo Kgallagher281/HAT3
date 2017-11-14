@@ -11,28 +11,75 @@
   </head>
 
   <body>
-<nav>
-        <% if user_signed_in?%>
+    <nav>
+      <% if user_signed_in?%>
         <!-- need to define root for HAT3. Direct to homepage -->
-            <span><%= link_to "HAT3", root_path %></span>
-            <span><%= link_to "Beers", beers_path %></span>
-            <span><%= link_to "Posts",  posts_path %></span>
-            <span><%= link_to "Store", store_index_path %></span>
-            <span><%= link_to "Beer Locations",  locations_path %></span>
-            <span><%= link_to "About Us", contacts_path %></span>
-            <span><%= link_to "Events", events_path %></span>
-            <span><%= link_to "Parent Company", "https://www.captainlawrencebrewing.com" %></span>
-            <span><%= link_to "Logout", destroy_user_session_path, :method => :delete %></span>
+        <span><%= link_to "HAT3", root_path %></span>
+        <span><%= link_to "Beers", beers_path %></span>
+        <span><%= link_to "Posts", posts_path %></span>
+        <span><%= link_to "Store", store_index_path %></span>
+        <span><%= link_to "Beer Locations", locations_path %></span>
+        <span><%= link_to "About Us", contacts_path %></span>
+        <span><%= link_to "Events", events_path %></span>
+        <span><%= link_to "Parent Company", "https://www.captainlawrencebrewing.com" %></span>
+        <span><%= link_to "Logout", destroy_user_session_path, :method => :delete %></span>
 
-           <% end %>
-          </li>
-        </ul>
-      </div>
-      <% else %>
-      </div>
-  </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </body>
+      <% end %>
+    </li>
+  </ul>
+</div>
+<% else %>
+</div>
+</nav>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= yield %>
+<!-- -->
+
+<footer class="footer-distributed">
+
+<div class="footer-right">
+
+<a href="#">
+  <%= image_tag "facebook.png"%>
+</a>
+<a href="#">
+  <%= image_tag "google.png"%>
+</a>
+<a href="#">
+  <%= image_tag "instagram.png"%>
+</a>
+<a href="#">
+  <%= image_tag "snapchat.png"%>
+</a>
+<a href="#">
+  <%= image_tag "twitter.png"%>
+</a>
+<a href="#">
+  <%= image_tag "youtube.png"%>
+</a>
+
+</div>
+</body>
+<div class="footer-left">
+
+<p class="footer-links">
+  <a href="#">Home</a>
+  ·
+  <a href="#">Posts</a>
+  ·
+  <a href="#">About</a>
+  ·
+  <a href="#">Events</a>
+  ·
+  <a href="#">Contact</a>
+</p>
+
+<p>HAT3 &copy; 2017</p>
+</div>
+
+</footer>
+<!-- -->
+
+
 </html>
