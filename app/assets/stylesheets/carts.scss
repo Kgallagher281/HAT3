@@ -46,7 +46,7 @@ body {
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-// CART HEADER
+/*/ CART HEADER*/
 .heading {
   padding: 1em 0;
   border-bottom: 1px solid #D0D0D0;
@@ -89,7 +89,7 @@ body {
   }
 }
 
-// TABLE HEADING
+/*// TABLE HEADING*/
 
 .tableHead {
   display: table;
@@ -106,7 +106,7 @@ body {
   }
 }
 
-// CART Items
+/*// CART Items*/
 
 .cart {
   padding: 1em 0 ;
@@ -281,7 +281,7 @@ a.remove {
 .btn
  {
      &:link , &:visited {
-    //   text-decoration: none;
+    /*//   text-decoration: none;
     //   font-family: 'Roboto', sans-serif;
     //   letter-spacing: -.015em;
     //   font-size: 1em;
@@ -292,7 +292,7 @@ a.remove {
     //   border-radius: 50px;
     // float: right;
     //   text-align: right;
-    //    @include transition(all, .25s, linear);
+    //    @include transition(all, .25s, linear);*/
     }
       &:after {
       content: "\276f";

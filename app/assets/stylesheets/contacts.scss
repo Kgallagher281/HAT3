@@ -1,12 +1,12 @@
-// Font imports
+/*// Font imports*/
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
-// Color vars
+/*// Color vars*/
 $white: #fff;
 $grey: #ccc;
 $dark_grey: #555;
 $blue: #4f6fad;
 $pink: #ee9cb4;
-// Mixins
+/*// Mixins*/
 @mixin lato-book {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
@@ -27,18 +27,10 @@ $pink: #ee9cb4;
 		background-color: lighten($color, 5%);
 	}
 }
-// Functions
+/*// Functions*/
 @function pxtoem($target, $context) {
 	@return ($target/$context)+0em;
 }
-//
-// body {
-// 	background-image: url('https://www.micromatic.com/sites/5/modules/70038/splash4.jpg');
-// 	font-size: 100%;
-// 	@include lato-reg;
-// }
-
-
 
 .container {
 	max-width: 510px;
@@ -175,7 +167,7 @@ form {
 		margin: 0 0 0 0.5em;
 	}
 }
-// Media Queries
+/*// Media Queries*/
 @media only screen and (max-width:480px) {
 	.pull-right {
 		float: none;

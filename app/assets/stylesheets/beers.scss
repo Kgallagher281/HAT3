@@ -93,7 +93,7 @@
   transition-delay: 0.3s;
 }
 
-// ========== Show ============================
+/*// ========== Show ============================*/
 /* Basic Styling */
 body,
 html {
@@ -144,7 +144,7 @@ html {
   border-bottom: 1px solid #E1E8EE;
   margin-bottom: 15px;
 }
-// ===== Beer Description =======
+/*// ===== Beer Description =======*/
 .beer-description span {
   font-size: 8px;
   color: #358ED7;
@@ -200,7 +200,7 @@ html {
 }
 
 .foodpairing img{
-  opacity: 0.4
+  opacity: 0.9;
 }
 #foodpairingtext{
   position: absolute;
@@ -210,6 +210,7 @@ html {
   font-size: 20px;
   color: white
 }
+
 #map {
   height: 60%;
   width: 60%;
