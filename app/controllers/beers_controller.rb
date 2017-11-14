@@ -49,7 +49,7 @@ class BeersController < ApplicationController
         @beers = Beer.all
         ActionCable.server.broadcast 'beers',
           html: render_to_string('store/index',layout: false)
-        
+
       else
         format.html { render :edit }
         format.json { render json: @beer.errors, status: :unprocessable_entity }
@@ -75,6 +75,6 @@ class BeersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def beer_params
-      params.require(:beer).permit(:name, :description, :food, :photo)
+      params.require(:beer).permit(:name, :description, :food, :photo, :abv, :ibu, :price6, :price12, :pricecase)
     end
 end
