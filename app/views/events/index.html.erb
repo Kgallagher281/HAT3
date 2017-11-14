@@ -11,8 +11,11 @@
 
       <section class="page1"> -->
         
-        <div class="page_container">
-         <%= image_tag event.photo.url(:large), class: "img" %>
+<div class="eventcontainer">
+         <%= image_tag event.photo.url(:medium), class: "eventimage" %>
+         <!-- class: "eventspic" -->
+<div class="details">
+  <a href="#">download <span>recipe<span></a>
           <h1><%= event.name %></h1>
 <br><br>
 
