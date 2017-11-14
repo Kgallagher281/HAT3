@@ -1,34 +1,24 @@
 
-
-
-<p id="notice"><%= notice %></p>
-
-<br><br>
+<h1 id = "Event-title">Events</h1>
 <% @events.each do |event| %>
+<div class="gallery cf">
+  <div>
+    <%= image_tag event.photo.url(:medium), class: "eventimage" %>
+  </div>
+  <h3 id ="Event-words"><%= event.name %> | <%= event.address %>| <%= event.date %></h3>
 
-<!--   <div class="wrapper">
-    <div class="main">
+</div>
 
-      <section class="page1"> -->
-        
-<div class="eventcontainer">
-         <%= image_tag event.photo.url(:medium), class: "eventimage" %>
-         <!-- class: "eventspic" -->
-<div class="details">
-  <a href="#">download <span>recipe<span></a>
-          <h1><%= event.name %></h1>
+
+
+
+
+
+
+
+
+
+
 <br><br>
 
-<br><br>
-              <small><%= event.date %> <br>
-<br><br>        
-                    <%= event.address %>
-
-              </small>
-            </a>
-            <%= link_to 'Show', event %>
-        </div>
-     <!--  </section>
-    </div>
-  </div> -->
 <% end %>
