@@ -17,9 +17,10 @@ $font-size: 18px;
   text-align: left;
   font-size: $font-size;
   position: relative;
+  z-index: -1
 }
 .beer-details-store {
-  position: absolute;
+  position: relative;
   width: 53%;
   float: left;
   height: 380px;
