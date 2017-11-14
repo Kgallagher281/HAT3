@@ -1,13 +1,12 @@
-<div class="SignupShadowBox"></div>
-<br><br><h4>Sign up to continue</h4>
-
-<br><center><i class="em em-christmas_tree"></i> <i class="em em-snowman"></i> <i class="em em-christmas_tree"></i>
+<div class="SignupShadowBox"></div><br>
+<h4>Sign up to continue</h4>
+<center><i class="em em-christmas_tree"></i> <i class="em em-snowman"></i> <i class="em em-christmas_tree"></i>
 
 <br><center><%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <br><%= f.label :fname %>
+    <%= f.label :fname %>
     <%= f.text_field :fname, id: :user_fname %>
   </div>
 

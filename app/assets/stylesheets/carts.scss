@@ -278,20 +278,21 @@ a.remove {
   }
 }
 
-.btn {
+.btn
+ {
      &:link , &:visited {
-      text-decoration: none;
-      font-family: 'Roboto', sans-serif;
-      letter-spacing: -.015em;
-      font-size: 1em;
-      padding: 1em 3em;
-      color: #fff;
-      background: #82ca9c;
-      font-weight: bold;
-      border-radius: 50px;
-    float: right;
-      text-align: right;
-       @include transition(all, .25s, linear);
+    //   text-decoration: none;
+    //   font-family: 'Roboto', sans-serif;
+    //   letter-spacing: -.015em;
+    //   font-size: 1em;
+    //   padding: 1em 3em;
+    //   color: #fff;
+    //   background: #82ca9c;
+    //   font-weight: bold;
+    //   border-radius: 50px;
+    // float: right;
+    //   text-align: right;
+    //    @include transition(all, .25s, linear);
     }
       &:after {
       content: "\276f";
