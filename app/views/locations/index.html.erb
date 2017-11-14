@@ -31,7 +31,7 @@
 <br>
 
 <div class="new">
-<%= link_to 'Add New Location', new_location_path %>
+<%= link_to 'Add New Location', new_location_path, class: 'btn btn-info' %>
 </div>
 
 <!DOCTYPE html>
@@ -46,6 +46,11 @@
       #map {
         height: 75%;
         width: 100%;
+        border: solid;
+        border-width: 5px;
+        border-color: black;
+
+
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
