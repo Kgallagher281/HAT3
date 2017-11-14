@@ -104,7 +104,7 @@ Event.create!([
 		details: "What a better way to celebrate Christmas then with your favorite friends and beverages.  Join us this Christmas eve for our annual Brew Ball.",
 		address: "New York, New York",
 		photo: open('http://randyclemens.com/site/wp-content/uploads/2009/12/christmas-beer.jpg')
-},
+# },
 
 # {		id: 4,
 # 		name: "Christmas Eve Brew Ball",
