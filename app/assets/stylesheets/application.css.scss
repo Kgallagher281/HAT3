@@ -47,6 +47,7 @@ span {
 	width: 100%;
 	text-align: left;
 	font: normal 13px sans-serif;
+
 	padding: 45px 50px;
 	margin-top: 80px;
 }
@@ -59,7 +60,14 @@ span {
 
 /* Footer links */
 
+.footer-distributed {
+	position:fixed;
+   	bottom:0;
+}
+
 .footer-distributed p.footer-links{
+	position:fixed;
+   	bottom:0;
 	font-size:18px;
 	font-weight: bold;
 	color:  #ffffff;
@@ -91,4 +99,4 @@ span {
 	text-align: center;
 	line-height: 35px;
 	margin-left: 3px;
-}
+
