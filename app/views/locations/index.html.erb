@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Beer Locations</h1>
+<h1 class="beer">Beer Locations</h1>
 
 <table>
   <thead>
@@ -44,7 +44,7 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 65%;
+        height: 75%;
         width: 100%;
       }
       /* Optional: Makes the sample page fill the window. */
@@ -130,7 +130,7 @@
         });
           marker.setMap(map);
           marker.addListener('click', function(){
-            infowindow.open(map.marker)
+            infowindow.open(map, marker)
           });
         });
 
