@@ -17,13 +17,9 @@
                 <%= item.quantity %>&times;
                 <%= number_to_currency(item.total_price) %>
               </p>
-
-              <p class="stockStatus">
-                In Stock</p>
             </div>
-
             <div class="prodTotal cartSection">
-              <p><%= item.beer.price %></p>
+              <p><%= item.beer.price6 %></p>
             </div>
 
           </div>
@@ -37,10 +33,10 @@
       <li class="totalRow final">
         <span class="label">Total</span><span class="value"><%= number_to_currency(@cart.total_price) %></span></li>
       <li class="totalRow">
-        <%= button_to "Checkout", new_order_path, method: :get, :class => 'btn continue"' %>
+        <%= button_to "Checkout", new_order_path, method: :get, :class => 'btn continue' %>
       </li>
     </ul>
   </div>
 </div>
 
-<%= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?', :class => 'btn-emptycart' } %>

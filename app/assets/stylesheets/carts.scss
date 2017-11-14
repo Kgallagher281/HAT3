@@ -1,7 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic);
-$fontSerif : 'Droid Serif', serif;
-
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic);
+$fontSerif : 'Roboto', serif;
 @mixin transition($transition-property, $transition-time, $method) {
     -webkit-transition: $transition-property $transition-time $method;
     -moz-transition: $transition-property $transition-time $method;
@@ -10,14 +8,10 @@ $fontSerif : 'Droid Serif', serif;
     transition: $transition-property $transition-time $method;
 }
 *{ box-sizing:border-box;}
-
-
-
 body {
   color: #333;
   -webkit-font-smoothing: antialiased;
   font-family: 'Roboto', sans-serif;
-
 }
  img {
    max-width:100%;
@@ -25,17 +19,13 @@ body {
 .cf:before,.cf:after {content: " ";display: table;}
 .cf:after {clear: both;}
 .cf {*zoom: 1;}
-
-
 .wrap {
   width: 75%;
   max-width: 960px;
   margin: 0 auto;
   padding: 5% 0;
   margin-bottom: 5em;
-
 }
-
 .projTitle {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
@@ -64,7 +54,7 @@ body {
       font-size: .75em;
       padding: 1em;
       color: #fff;
-      background: #82ca9c;
+      background: #337AB7;
       font-weight: bold;
       border-radius: 50px;
     float: right;
@@ -139,7 +129,7 @@ body {
 
       h3 {
 
-        font-size: 1em;
+        font-size: 2em;
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
         text-transform: uppercase;
@@ -149,7 +139,7 @@ body {
       }
       p {
         display: inline-block;
-        font-size: .85em;
+        font-size: 1.85em;
 
         color: #777777;
         font-family: 'Roboto', sans-serif   ;
@@ -175,10 +165,11 @@ body {
         float: left;
       }
       &.qtyWrap , &.prodTotal {
+
         text-align: center;
     p {
       font-weight: bold;
-      font-size: 1.25em;
+      font-size: 1.8em;
     }
 
       }
@@ -202,7 +193,6 @@ body {
   }
 
 }
-
  .special {
    display: block;
    font-family: 'Roboto', sans-serif;
@@ -238,62 +228,9 @@ a.remove {
   }
 }
 
-.promoCode {
-  border:2px solid #efefef;
-  float: left;
-  width: 35%;
-  padding: 2%;
-  label {
-    display: block;
-    width: 100%;
- font-style: italic;
-    font-size: 1.15em;
-
-    margin-bottom: .5em;
-    letter-spacing: -.025em;
-
-  }
-  input {
-    width: 85%;
-    font-size: 1em;
-    padding: .5em;
-    float: left;
-    border: 1px solid #dadada;
-    &:active, &:focus {
-      outline: 0;
-
-    }
-  }
-  a.btn {
-    float: left;
-    width: 15%;
-    padding: .75em 0;
-    border-radius: 0 1em 1em 0;
-    text-align: center;
-    border: 1px solid #82ca9c;
-    &:hover {
-       border: 1px solid #f69679;
-       background: #f69679;
-    }
-  }
-}
 
 .btn
  {
-     &:link , &:visited {
-    /*//   text-decoration: none;
-    //   font-family: 'Roboto', sans-serif;
-    //   letter-spacing: -.015em;
-    //   font-size: 1em;
-    //   padding: 1em 3em;
-    //   color: #fff;
-    //   background: #82ca9c;
-    //   font-weight: bold;
-    //   border-radius: 50px;
-    // float: right;
-    //   text-align: right;
-    //    @include transition(all, .25s, linear);*/
-    }
       &:after {
       content: "\276f";
       padding: .5em;
@@ -303,7 +240,7 @@ a.remove {
 
     }
     &:hover , &:focus, &:active {
-      background: #f69679;
+      background: #337AB7;
         &:after {
         right: -10px;
       }
@@ -320,8 +257,9 @@ a.remove {
 float: right;
  width: 35%;
   .totalRow {
+    list-style-type: none;
     padding: .5em;
-   text-align: right;
+    text-align: right;
 
     &.final {
       font-size: 1.25em;
@@ -363,7 +301,6 @@ float: right;
 }
 .cart {
   .items {
-
   .cartSection {
     width: 90%;
       display: block;float: left;
@@ -377,7 +314,7 @@ float: right;
          display: block;
          font-family: 'Roboto', sans-serif;
          padding: .25em;
-         font-size: .75em;
+         font-size: 2em;
        }
      }
      &.prodTotal , &.removeWrap {
@@ -394,4 +331,8 @@ float: right;
 width: 100%;
 text-align: center;
 }
+}
+.btn-emptycart{
+  float: right;
+  background-color: #337AB7;
 }

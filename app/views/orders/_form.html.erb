@@ -2,23 +2,25 @@
 <div class="user">
     <header class="user__header">
         <img src="https://harrisonpensa.com/wp-content/uploads/2015/07/ThinkstockPhotos-480775382.jpg" alt="" class="checkout-image"/>
-        <h1 class="user__title">Check Out</h1>
     </header>
 
     <form class="form">
         <div class="form__group">
-            <input type="text" placeholder="Name" class="form__input" />
+            <%= form.label :name %>
+            <%= form.text_field :name, id: :order_name, size: 20 %>
         </div>
 
         <div class="form__group">
-            <input type="email" placeholder="Email" class="form__input" />
+            <%= form.label :email %>
+            <%= form.text_field :email, id: :order_email, size: 20 %>
         </div>
 
         <div class="form__group">
-            <input type="address" placeholder="Address" class="form__input" />
+            <%= form.label :address %>
+            <%= form.text_area :address, id: :order_address %>
         </div>
 
-        <div class="form__group">
+        <div class="form__group_paytype">
           <%= form.label :pay_type %>
           <%= form.select :pay_type, Order.pay_types.keys, prompt: "Select a payment method" %>
           <!-- id: :order_pay_type -->
