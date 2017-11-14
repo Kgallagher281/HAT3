@@ -22,10 +22,10 @@
             <h3>Beer Style:</h3>
           </div><br>
           <div>
-            <h5>ABV:</h5>
+            <h5>ABV: <%= @beer.abv %></h5>
           </div><br>
           <div>
-            <h5>IBU:</h5>
+            <h5>IBU: <%= @beer.ibu %></h5>
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@
 </div>
 <div class="locations"> <div id="map"></div>
 
-  
+
 </div>
 
 <%= link_to 'Edit', edit_beer_path(@beer) %>|
