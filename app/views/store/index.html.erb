@@ -11,6 +11,8 @@
     <p>ABV:<%= beer.abv %></p>
     <p>IBU:<%= beer.ibu %></p>
     <span ><%= number_to_currency(beer.price6) %></span>
+    <span class="price"><%= number_to_currency(beer.price6) %></span>
+
     <%= button_to 'Add to Cart', line_items_path(beer_id: beer), :class => 'store-button' %>
   </div>
 </div>
